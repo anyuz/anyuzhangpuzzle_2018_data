@@ -2,12 +2,12 @@
 
 
 ## Table of Contents
-1. [Implementation details](README.md#implementation-details)
+1. [Implementation](README.md#implementation)
 2. [Test 1](README.md#test-1)
 3. [My tests](README.md#my-tests)
 4. [Optimization of sessionization.py ](README.md#Optimization-of-sessionization.py )
 
-## Implementation details
+## Implementation
 
 The algorithm in sessionization.py uses two dictionaries iplib and timelib. The iplib stores ip of unexpired session as key and  [first request time, most recent request time, num of requests] as value.  The timelib is an OrderedDict and stores timestamp as key and all ips that have a most recent request at that timestamp as value.   
 
