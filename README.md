@@ -9,7 +9,10 @@
 
 ## Implementation details
 
-The algorithm in sessionization.py uses two dictionaries iplib and timelib. The iplib stores ip of unexpired session as key and [first request time, most recent request time, num of requests] as value.  The timelib is an OrderedDict and stores timestamp as key and all ips that have a most recent request at that timestamp as value.   Due to the chronical order of log.csv, all keys in timelib are inserted chronically.  Maintaining this order will boost the process of deleting timed-out sessions compared with normal dictionary structure.  As inactivity period time rises, the performance gap between my origianl version of sessionization.py and optimized version of sessionization.py will increase.
+The algorithm in sessionization.py uses two dictionaries iplib and timelib. The iplib stores ip of unexpired session as key and  [first request time, most recent request time, num of requests] as value.  The timelib is an OrderedDict and stores timestamp as key and all ips that have a most recent request at that timestamp as value.   
+
+Due to the chronical order of log.csv, all keys in timelib are inserted chronically.  Maintaining this order will boost the process of deleting timed-out sessions compared with normal dictionary structure.  As inactivity period time rises, the performance gap between my origianl version of sessionization.py and optimized version of sessionization.py will increase.
+
 
 ## Test 1
 Pass test_1  
