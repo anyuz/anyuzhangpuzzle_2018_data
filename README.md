@@ -9,7 +9,7 @@
 
 ## Implementation details
 
-
+The algorithm uses two dictionaries iplib and timelib. iplib stores ip of unexpired session as key and [first request time, most recent request time, num of requests] as value. Timelib is an OrderedDict and stores timestamp as key and all ips that have a most recent request at that timestamp as value. Due to the chronical order of log.csv, all keys in timelib are inserted chronically. Maintaining this order will boost the process of deleting timed-out sessions compared with normal dictionary structure. As interval rises, this performance gap will increase.
 
 ## Test 1
 Pass test_1  
