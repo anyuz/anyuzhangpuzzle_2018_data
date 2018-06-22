@@ -9,7 +9,7 @@
 
 ## Implementation details
 
-The algorithm uses two dictionaries iplib and timelib. iplib stores ip of unexpired session as key and [first request time, most recent request time, num of requests] as value. Timelib is an OrderedDict and stores timestamp as key and all ips that have a most recent request at that timestamp as value. Due to the chronical order of log.csv, all keys in timelib are inserted chronically. Maintaining this order will boost the process of deleting timed-out sessions compared with normal dictionary structure. As interval rises, this performance gap will increase.
+The algorithm in sessionization.py uses two dictionaries iplib and timelib. The iplib stores ip of unexpired session as key and [first request time, most recent request time, num of requests] as value.  The timelib is an OrderedDict and stores timestamp as key and all ips that have a most recent request at that timestamp as value.   Due to the chronical order of log.csv, all keys in timelib are inserted chronically.  Maintaining this order will boost the process of deleting timed-out sessions compared with normal dictionary structure.  As inactivity period time rises, the performance gap between my origianl version of sessionization.py and optimized version of sessionization.py will increase.
 
 ## Test 1
 Pass test_1  
@@ -40,9 +40,6 @@ As I changed the period of inactivity time to 5 seconds, two sessions of 108.91.
 ## Optimization of sessionization.py 
 
 With a large dataset in 2017, which size is 2.78GB, the computating time is as long as more than 20 mins in the first version of my sessionization.py. It is too long to be a applicable program. So I made changes in the data structure of inputs. Then as following example, the computational time can be half of original version.
-
-
-
 
 
 
