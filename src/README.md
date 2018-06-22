@@ -1,1 +1,1 @@
-## This folder contains two version of sessionization.py 
+## This folder contains different versions of sessionization.py 
