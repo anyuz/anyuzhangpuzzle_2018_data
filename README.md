@@ -39,7 +39,7 @@ As I changed the period of inactivity time to 5 seconds, two sessions of 108.91.
 
 ## Optimization of sessionization.py 
 
-With a large dataset in 2017, which size is 2.78GB, the computating time is as long as more than 20 mins in the first version of my sessionization.py. It is too long to be a applicable program. So I made changes like following:
+With a large dataset in 2017, which size is 2.78GB, the computating time is as long as more than 20 mins in the first version of my sessionization.py. It is too long to be a applicable program. So I made changes in the data structure of inputs. Then as following example, the computational time can be half of original version.
 
 
 
